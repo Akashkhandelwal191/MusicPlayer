@@ -52,6 +52,7 @@ body{
 .container{
     background-color: #10002b;
     height:var(--heightvalue);
+    
     /* border: 1px solid #10002b; */
     border-radius: var(--radius);
     box-shadow: 0 0 20px 10px rgba(255,255,255,0.7);
@@ -180,7 +181,7 @@ body{
 .music_controls{
 
 
-    width: 20rem;
+    width:20rem;
     display: flex; 
     justify-content: space-between; 
     align-items: center;
@@ -331,15 +332,7 @@ body{
    right: -500px;
 }
 
-@media screen and (max-width:500px)
-{
-    :root{
-        --heightvalue:640px;
-        --radius:0px;
-    }
 
-    
-}
 
 .Sidebar .Sidebar-body{
     
@@ -388,11 +381,55 @@ body{
     /* box-shadow: 0 0 20px 5px rgba(255,255,255,0.6); */
 }
 
+@media screen and (max-width:500px)
+{
+    :root{
+        --heightvalue:100%;
+        --radius:0px;
+    }
+    .container{
+        height: 100%;
+        width: 100%;
+    }
 
+   .Sidebar .Sidebar-body .songs{
+       padding:5px;
+   }
+
+   .Sidebar .Sidebar-body .songs .songs-body-details h2{
+          font-size: 1.4rem;
+    }
+    .Sidebar .Sidebar-body .songs .songs-body-details h4{
+       
+            font-size: 1rem;
+   }
+   .Sidebar .Sidebar-body .songs .songs-body-details p{
+       font-size: 1.1rem;
+   }
+}
 
 @media screen and (max-width:400px)
 {
     :root{
         --widthvalue:355px;
     }
+   
+}
+
+@media screen and (max-width:350px)
+{
+    .music_controls{
+        width:15rem;
+    }
+    .Sidebar{
+        width: 300px;
+    }
+    .Sidebar .Sidebar-Head{
+        width: 300px;
+    }
+    .Sidebar .Sidebar-body{
+        width: 300px;
+    }
+
+    
 }
